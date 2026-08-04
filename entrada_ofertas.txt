@@ -9,15 +9,9 @@
 # Mercado Livre e copie direto da página.
 # ============================================================
 
-titulo: Tênis Corrida Confortável Leve
-preco_de: 199.90
-preco_por: 139.90
-url: https://produto.mercadolivre.com.br/MLB-000000000-tenis-exemplo
-imagem: https://http2.mlstatic.com/exemplo.jpg
----
-titulo:
-preco_de:
-preco_por:
-url:
-imagem:
----
+titulo: Creatina 1kg Suplemento Monohidratada em pó 100% Pura - Soldiers Nutrition
+preco_de: 239,90
+preco_por: 59,90
+url: https://www.mercadolivre.com.br/creatina-1kg-suplemento-monohidratada-em-po-100-pura-soldiers-nutrition/p/MLB18725310?pdp_filters=item_id%3AMLB2766771378&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB2766771378&sid=affiliates
+imagem: https://http2.mlstatic.com/D_NQ_NP_2X_894230-MLA111390627295_052026-F.webp
+
