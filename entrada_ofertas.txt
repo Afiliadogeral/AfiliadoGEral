@@ -1,0 +1,23 @@
+# ============================================================
+# COLE AQUI AS OFERTAS QUE VOCÊ ESCOLHEU NO MERCADO LIVRE
+# ============================================================
+# Um produto por bloco. Copie o bloco de exemplo abaixo pra cada
+# produto novo. NÃO apague as linhas "titulo:", "preco_de:" etc,
+# só troque o valor depois dos dois pontos.
+#
+# Onde pegar cada informação: entre no anúncio do produto no
+# Mercado Livre e copie direto da página.
+# ============================================================
+
+titulo: Tênis Corrida Confortável Leve
+preco_de: 199.90
+preco_por: 139.90
+url: https://produto.mercadolivre.com.br/MLB-000000000-tenis-exemplo
+imagem: https://http2.mlstatic.com/exemplo.jpg
+---
+titulo:
+preco_de:
+preco_por:
+url:
+imagem:
+---
