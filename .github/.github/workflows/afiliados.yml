@@ -1,0 +1,42 @@
+name: Bot de Afiliados
+
+on:
+  schedule:
+    # 23:00 UTC = 20:00 em Brasília (horário padrão, sem horário de verão)
+    - cron: "0 23 * * *"
+  workflow_dispatch: {}   # permite clicar em "Run workflow" pra testar manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  postar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Preparar ofertas (a partir do que você colou em entrada_ofertas.txt)
+        run: python preparar.py
+
+      - name: Postar ofertas
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+        run: python postar.py
+
+      - name: Salvar arquivo pronto pro WhatsApp como resultado do job
+        uses: actions/upload-artifact@v4
+        with:
+          name: texto-para-whatsapp
+          path: para_whatsapp.txt
+
+
+    
