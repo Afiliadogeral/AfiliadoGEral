@@ -1,0 +1,10 @@
+.env
+*.pyc
+__pycache__/
+ofertas.json
+urls_para_colar.txt
+para_whatsapp.txt
+*.session
+
+# NÃO ignore links_gerados.txt nem entrada_ofertas.txt:
+# eles precisam ficar salvos no repositório pro workflow ler.
