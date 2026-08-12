@@ -2,9 +2,8 @@ name: Bot de Afiliados
 
 on:
   schedule:
-    # 23:00 UTC = 20:00 em Brasília (horário padrão, sem horário de verão)
     - cron: "0 23 * * *"
-  workflow_dispatch: {}   # permite clicar em "Run workflow" pra testar manualmente
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -21,7 +20,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Preparar ofertas (a partir do que você colou em entrada_ofertas.txt)
+      - name: Preparar ofertas
         run: python preparar.py
 
       - name: Postar ofertas
@@ -32,11 +31,8 @@ jobs:
           INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
         run: python postar.py
 
-      - name: Salvar arquivo pronto pro WhatsApp como resultado do job
+      - name: Salvar arquivo pronto pro WhatsApp
         uses: actions/upload-artifact@v4
         with:
           name: texto-para-whatsapp
           path: para_whatsapp.txt
-
-
-    
