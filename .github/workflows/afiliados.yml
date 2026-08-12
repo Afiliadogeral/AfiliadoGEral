@@ -36,5 +36,3 @@ jobs:
         with:
           name: texto-para-whatsapp
           path: para_whatsapp.txt
-
-          adicionar workflow
